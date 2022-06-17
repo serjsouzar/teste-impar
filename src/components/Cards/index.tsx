@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Container, Card, SearchStyle } from "./styles";
 
+
 interface CardProps {
   newCardModalOpen: () => void;
 }
@@ -44,7 +45,7 @@ export function Cards({ newCardModalOpen }: CardProps) {
 
   function SetPokemonInfo(pokemon: any) {
     axios.get(pokemon.url).then((r) => {
-      setPokemon((pokemon) => [...pokemon, r.data]); 
+      setPokemon((pokemon) => [...pokemon,r.data]); 
       setAllPokemon((pokemon) => [...pokemon, r.data]);
     });
   }
@@ -90,9 +91,9 @@ export function Cards({ newCardModalOpen }: CardProps) {
                 {poke.sprites && (
                   <img id="card__img" width={100} height={100} src={_imgSrc} />
                 )}
-                <div id="btn">
-                  <button>Excluir</button>
-                  <button>Editar</button>
+                <div id="btn-group">
+                  <button onClick={() => {alert("Funcionalidade não implementada")}} >Editar</button>
+                  <button onClick={() => {alert("Funcionalidade não implementada")}}>Excluir</button>
                 </div>
               </div>
             );

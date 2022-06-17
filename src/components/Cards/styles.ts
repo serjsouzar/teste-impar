@@ -66,21 +66,25 @@ export const Card = styled.div`
       margin-top: -1.5rem;
     }
 
-    #btn {
-      width: 100%;
-      margin: 0;
-      border: 0;
-      padding: 0;
+    #btn-group {
+      width: auto;
       margin-bottom: -3rem;
-      display: inline-block;
     }
 
     button {
-      align-items: center;
-      margin-left: -1rem;
-      display: inline;
+      color: var(--darkGoldenRod);
+      width: 200px;
+      margin-left: -3rem;
+      margin-right: -3rem;
+      margin-bottom: -2rem;
       padding-left: 2rem;
       padding-right: 2rem;
+      border-color: var(--indigo);
+      transition: filter 0.2s;
+
+      &:hover {
+        filter: brightness(0.7);
+      }
     }
   }
 `;
