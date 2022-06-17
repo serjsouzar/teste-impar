@@ -84,12 +84,13 @@ export function Cards({ newCardModalOpen }: CardProps) {
             let _name = poke.name;
             let _imgSrc = poke.sprites.front_default;
             return (
-              <div id="card__layout">
-                <p id="card__title">{_name}</p>
+              <div className="card" id="card__layout">
+                <h2 id="card__title">{_name}</h2>
+                <hr/>
                 {poke.sprites && (
                   <img id="card__img" width={100} height={100} src={_imgSrc} />
                 )}
-                <div>
+                <div id="btn">
                   <button>Excluir</button>
                   <button>Editar</button>
                 </div>
