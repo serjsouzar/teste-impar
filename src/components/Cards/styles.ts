@@ -25,7 +25,7 @@ export const Container = styled.main`
       filter: brightness(0.7);
     }
   }
-  h1{
+  h1 {
     color: var(--indigo);
     font-weight: lighter;
   }
@@ -39,49 +39,82 @@ export const Card = styled.div`
   margin: 0;
   padding-top: 0;
 
-  #card__layout{
+  #card__layout {
     display: flex;
     flex-direction: column;
-    background: #ccc;
+    background: #ffffff;
     margin: 50px;
     padding: 50px;
     border-radius: 0.25rem;
-    
-    
-    #card__title{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+    #card__title {
       display: flex;
-      width: 65px;
+      width: 60px;
       margin: 0;
-      justify-content: center;
-      padding-bottom: 2rem;
+      margin-top: -1rem;
+      align-items: center;
+      padding-bottom: 2.3rem;
+      color: var(--indigo);
     }
 
-    
+    #card__img {
+      margin-bottom: 1rem;
+    }
+
+    hr {
+      margin-top: -1.5rem;
+    }
+
+    #btn {
+      width: 100%;
+      margin: 0;
+      border: 0;
+      padding: 0;
+      margin-bottom: -3rem;
+      display: inline-block;
+    }
+
+    button {
+      align-items: center;
+      margin-left: -1rem;
+      display: inline;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
   }
-`
+`;
 
 export const SearchStyle = styled.header`
   max-width: 1120px;
   width: auto;
   height: auto;
-  
+
   padding: 3rem 3rem 3rem 2rem;
   display: grid;
   justify-content: center;
 
   input {
-    
+    width: auto;
     border: 2px solid #d7d7d7;
     border-color: var(--indigo);
-    background: #e7e9ee;
+    background: #ffffff;
     border-radius: 0.25rem;
     padding: 0 15rem;
     height: 5rem;
     justify-content: left;
     margin-top: -1rem;
-    text-align: center; 
+    text-align: center;
+
+    ::placeholder {
+      margin-right: -5rem;
+      text-align: left;
+      margin-left: -4rem;
+      font-size: 1.2rem;
+    }
   }
+
   div {
-    margin-bottom: -8rem ;
+    margin-bottom: -8rem;
   }
-`
+`;
